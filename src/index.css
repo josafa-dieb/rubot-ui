@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ufc-blue: #003B6F;
+  --color-ufc-blue-light: #0056A3;
+  --color-ufc-yellow: #FFD100;
+  --color-ufc-yellow-light: #FFE04A;
+  --color-ufc-gray: #f3f4f6;
+}
+
+#root {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-ufc-gray);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
