@@ -4,10 +4,11 @@ import { CreditCard, Hash, GraduationCap, ArrowRight, User } from 'lucide-react'
 function App() {
   const [matricula, setMatricula] = useState('')
   const [cartao, setCartao] = useState('')
+  const [salvarSessao, setSalvarSessao] = useState(false)
 
   const handleRecharge = (e: React.FormEvent) => {
     e.preventDefault()
-    alert(`Iniciando recarga...\nMatrícula: ${matricula}\nCartão: ${cartao}`)
+    alert(`Iniciando recarga...\nMatrícula: ${matricula}\nCartão: ${cartao}\nSalvar sessão: ${salvarSessao ? 'Sim' : 'Não'}`)
   }
 
   return (
@@ -83,6 +84,20 @@ function App() {
                   required
                 />
               </div>
+            </div>
+
+            {/* Salvar Sessão Checkbox */}
+            <div className="flex items-center">
+              <input
+                id="salvar-sessao"
+                type="checkbox"
+                className="w-4 h-4 text-ufc-blue bg-gray-100 border-gray-300 rounded focus:ring-ufc-blue focus:ring-2"
+                checked={salvarSessao}
+                onChange={(e) => setSalvarSessao(e.target.checked)}
+              />
+              <label htmlFor="salvar-sessao" className="ml-2 text-sm font-medium text-gray-700">
+                Salvar sessão
+              </label>
             </div>
 
             {/* Submit Button */}
